@@ -2,7 +2,7 @@ import torch
 from diffusers import StableDiffusionPipeline
 
 pipe = StableDiffusionPipeline.from_pretrained(
-    "runwayml/stable-diffusion-v1-5", 
+    "stabilityai/stable-diffusion-2-1", 
     revision="fp16", 
     torch_dtype=torch.float16,
 )
