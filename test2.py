@@ -9,6 +9,5 @@ pipe = StableDiffusionPipeline.from_pretrained(
 pipe = pipe.to("cuda")
 
 prompt = "a photo of an astronaut riding a horse on mars"
-pipe.enable_attention_slicing()
 image = pipe(prompt).images[0]  
 image.save("astronaut_rides_horse.png")
