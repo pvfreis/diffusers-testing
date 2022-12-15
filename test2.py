@@ -6,6 +6,8 @@ pipe = StableDiffusionPipeline.from_pretrained(
     revision="fp16", 
     torch_dtype=torch.float16,
 )
+pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(pipe.scheduler.config)
+
 pipe = pipe.to("cuda")
 
 prompt = "a photo of an astronaut riding a horse on mars"
