@@ -1,5 +1,6 @@
 import torch
 from diffusers import StableDiffusionPipeline
+from diffusers import EulerAncestralDiscreteScheduler
 
 pipe = StableDiffusionPipeline.from_pretrained(
     "stabilityai/stable-diffusion-2-1", 
